@@ -3,8 +3,9 @@ package com.jjh.streams
 object StreamApp extends App {
   // Pre Scala 2.13
   val stream = 3 #:: 2#:: 4 #:: Stream.empty
-  println(stream)
+  println(stream) // Head but tail not computed
   stream.foreach(println _)
+  println(stream) // fully computed
 
   println("-" * 25)
 
@@ -13,7 +14,8 @@ object StreamApp extends App {
 
   println("-" * 25)
 
-  val stream3 = (1 to 10).toStream
+  val myList = List("One", "Two", "Three")
+  val stream3 = myList.toStream
   println(stream3)
   val stream4 = stream3.take(5)
   stream4.foreach(println _)

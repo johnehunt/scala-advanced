@@ -6,8 +6,9 @@ object LazyListApp extends App {
   // Use LazyList (which is fully lazy) instead of Stream (which has a lazy tail only)
 
   val lazyList = 3 #:: 2#:: 4 #:: LazyList.empty
-  println(lazyList)
+  println(lazyList) // Not computed
   lazyList.foreach(println _)
+  println(lazyList) // Fully evaluated
 
   println("-" * 25)
 
@@ -16,7 +17,8 @@ object LazyListApp extends App {
 
   println("-" * 25)
 
-  val lazyList3 = LazyList.empty concat (1 to 10)
+  val myList = List("One", "Two", "Three")
+  val lazyList3 = LazyList.empty concat myList
   println(lazyList3)
   val lazyList4 = lazyList3.take(5)
   lazyList4.foreach(println _)
