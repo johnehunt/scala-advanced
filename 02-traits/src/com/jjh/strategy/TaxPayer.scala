@@ -19,7 +19,7 @@ class Employee {
   // tie the class to another type (which will be implemented in future)
   self: TaxPayer =>
 
-  def calculatePayments = {
+  def calculatePayments: Unit = {
     println(calculateTax(30000))
   }
   
