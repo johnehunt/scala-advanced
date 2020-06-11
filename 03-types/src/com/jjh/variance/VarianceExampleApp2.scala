@@ -3,7 +3,7 @@ package com.jjh.variance
 object VarianceExampleApp2 extends App {
 
   class Fruit
-  case class Apple(name: String) extends Fruit
+  case class Apple(name: String = "Braeburn") extends Fruit
   case class Carrot(colour: String = "Orange") extends Fruit
 
   class ShoppingBag[+T]
