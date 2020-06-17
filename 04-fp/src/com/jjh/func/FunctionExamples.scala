@@ -1,7 +1,7 @@
 package com.jjh.func
 
 object FunctionExamples extends App {
-  var increase = (x: Int) => x + 1
+  var increase: Function1[Int, Int] = (x: Int) => x + 1
 
   println(s"increase: $increase")
   println(s"increase(5): ${increase(5)}")

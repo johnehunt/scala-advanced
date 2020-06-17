@@ -21,5 +21,5 @@ object PrinterTestApp extends App {
     new File("data.txt"),
     (writer: PrintWriter) => writer.println(new Date())
   )
-}object CollectExampleApp extends App {
+}
 
